@@ -51,34 +51,22 @@ setTheme()
 setLayout();
 
 function showInput() {
-    if (window.innerHeight > window.innerWidth) { // mobile
-        document.getElementById("input").style.height = "calc(70% - 165px)";
-        document.getElementById("output").style.height = "calc(30% - 160px)";
-        document.getElementById("input").style.width = "calc(100% - 20px)";
-        document.getElementById("output").style.width = "calc(100% - 20px)";
-    } else { // desktop
-        document.getElementById("output").style.width = "calc(30% - 15px)";
-        document.getElementById("input").style.width = "calc(70% - 15px)";
-        document.getElementById("input").style.height = "calc(100% - 265px)";
-        document.getElementById("output").style.height = "calc(100% - 265px)";
-    }
+    document.getElementById("input").style.visibility = "initial";
+    document.getElementById("output").style.visibility = "hidden";
+    document.getElementById("edittext").style.visibility = "hidden";
+    document.getElementById("calculate").innerText = "Transpose";
+    document.getElementById("input").focus();
     document.getElementById("input").style.color = fontcolor;
     document.getElementById("output").style.color = "grey";
     bigTextarea = 0;
 }
 
 function showOutput() {
-    if (window.innerHeight > window.innerWidth) { // mobile
-        document.getElementById("input").style.height = "calc(30% - 165px)";
-        document.getElementById("output").style.height = "calc(70% - 160px)";
-        document.getElementById("input").style.width = "calc(100% - 20px)";
-        document.getElementById("output").style.width = "calc(100% - 20px)";
-    } else { // desktop
-        document.getElementById("output").style.width = "calc(70% - 15px)";
-        document.getElementById("input").style.width = "calc(30% - 15px)";
-        document.getElementById("input").style.height = "calc(100% - 265px)";
-        document.getElementById("output").style.height = "calc(100% - 265px)";
-    }
+    document.getElementById("input").style.visibility = "hidden";
+    document.getElementById("output").style.visibility = "initial";
+    document.getElementById("calculate").innerText = "🠄 Back to edit";
+    document.getElementById("edittext").style.visibility = "initial";
+    document.getElementById("edittext").style.visibility = "initial";
     document.getElementById("output").style.color = fontcolor;
     document.getElementById("input").style.color = "grey";
     bigTextarea = 1;
